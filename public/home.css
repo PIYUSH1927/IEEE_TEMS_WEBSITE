@@ -1,0 +1,15 @@
+
+.nav-link:focus {
+    outline: none; 
+    color: black !important; 
+    background-color: white;
+  }
+  .nav-link {
+    font-style: "Ubuntu";
+    font-weight: bold;
+    color: white;
+}
+.nav-link:hover{
+    background-color: white;
+    color: black;
+}
