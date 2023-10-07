@@ -1,48 +1,64 @@
-body{
-    margin: 0px;
-    background-color: #000;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow: hidden; 
 }
 
 .backvideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
-    min-height: 80%;
-    filter: opacity(60%) blur(0px);
-    transition: 0.5s;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100vh; 
+  object-fit: cover; 
+  z-index: -1; 
+  filter: opacity(60%) blur(0px);
+  transition: 0.5s;
 }
 
-/* Video Experiments */
 
 
-.logo{
-    position: absolute;
-    top: 30vh;
-    left: 35vw;
-    max-width: 30vw;
-}
-
-.logo:hover{
-    filter: opacity(100%);
-}
-
-/* CSS for Glowing button */
-.glow-on-hover {
-    width: 15vw;
-    height: 6vh;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #2f2f2f;
-    cursor: pointer;
-    position: absolute;
-    top: 80vh;
-    left: 42.5vw;
-    z-index: 0;
-    border-radius: 40px;
-    transition: 0.5s;
+@keyframes logoOpacity {
+  0% {
+    opacity: 0.5; 
+    transform: scale(0.9); 
   }
+  50% {
+    opacity: 1; 
+    transform: scale(1); 
+  }
+  100% {
+    opacity: 0.5; 
+    transform: scale(0.9); 
+  }
+}
+
+
+
+
+.glow-on-hover {
+  width: 15vw;
+  height: 6vh;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #2f2f2f;
+  cursor: pointer;
+  position: absolute;
+  bottom: 18vh; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 0;
+  border-radius: 40px;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.glow-on-hover:hover{
+  background: #149900;
+}
+
   
   .glow-on-hover:before {
     content: '';
@@ -75,7 +91,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #2f2f2f;
+    background: #4a4545;
     left: 0;
     top: 0;
     border-radius: 40px;
@@ -86,3 +102,157 @@ body{
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
   }
+
+  @keyframes logoAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  .logo {
+    position: absolute;
+    top: 26vh;
+    left: 35vw;
+    max-width: 30vw;
+    opacity: 0; 
+     animation: logoAnimation 2s ease-in-out infinite;
+    animation: logoOpacity 6s ease-in-out infinite; 
+  }
+
+  .moving-dots {
+  position: absolute;
+  top: 26vh;
+  left: 35vw;
+  width: 30vw;
+  height: 30vh;
+}
+
+.dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.dot1 {
+  animation-name: moveDot1;
+}
+
+.dot2 {
+  animation-name: moveDot2;
+}
+
+.dot3 {
+  animation-name: moveDot3;
+}
+.dot4 {
+  animation-name: moveDot4;
+}
+
+
+@keyframes moveDot1 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes moveDot2 {
+  0% {
+    top: 0;
+    left: 100%;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 100%;
+  }
+}
+
+@keyframes moveDot3 {
+  0% {
+    top: 100%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 100%;
+    left: 0;
+  }
+}
+
+@keyframes moveDot4 {
+  0% {
+    top: 100%;
+    left: 100%;
+  }
+  50% {
+    top: 50%;
+    left: 50%; 
+  }
+  100% {
+    top: 100%;
+    left: 100%; 
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .glow-on-hover {
+    width: 40vw; 
+    height: 6vh; 
+    font-size: 12px; 
+  }
+  .dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .moving-dots {
+    position: absolute;
+    top: 23vh;
+    left: 35vw;
+    width: 30vw;
+    height: 30vh;
+  }
+  .logo {
+    position: absolute;
+    top: 29vh;
+    left: 20vw;
+    max-width: 60vw;
+    opacity: 0; 
+     animation: logoAnimation 2s ease-in-out infinite;
+    animation: logoOpacity 5s ease-in-out infinite;
+  }
+
+}
