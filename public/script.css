@@ -120,9 +120,9 @@ body {
     top: 26vh;
     left: 35vw;
     max-width: 30vw;
-    opacity: 0; 
-     animation: logoAnimation 2s ease-in-out infinite;
-    animation: logoOpacity 4s ease-in-out infinite; 
+    opacity: 1; 
+    animation: logoAnimation 2s ease-in-out ;
+    
   }
 
   .moving-dots {
@@ -250,9 +250,9 @@ body {
     top: 29vh;
     left: 20vw;
     max-width: 60vw;
-    opacity: 0; 
-     animation: logoAnimation 2s ease-in-out infinite;
-    animation: logoOpacity 5s ease-in-out infinite;
+    opacity: 1; 
+     animation: logoAnimation 2s ease-in-out ;
+    
   }
 
 }

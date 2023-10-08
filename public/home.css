@@ -1,8 +1,11 @@
 
+
+
+
+/* Domain section start */
 .nav-link:focus {
     outline: none; 
     color: black !important; 
-    background-color: white;
   }
   .nav-link {
     font-style: "Ubuntu";
@@ -13,3 +16,4 @@
     background-color: white;
     color: black;
 }
+/* Domain section end*/
