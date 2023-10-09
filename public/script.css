@@ -222,7 +222,7 @@ body {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .glow-on-hover {
     width: 40vw; 
     height: 6vh; 
@@ -255,4 +255,70 @@ body {
     
   }
 
+}
+
+@media screen and (min-width: 500px) and (max-width:600px) {
+
+  .glow-on-hover {
+    width: 35vw; 
+    height: 6vh; 
+    font-size: 12px; 
+  }
+
+  .dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .moving-dots {
+    position: absolute;
+    top: 23vh;
+    left: 35vw;
+    width: 30vw;
+    height: 30vh;
+  }
+  .logo {
+    position: absolute;
+    top: 29vh;
+    left: 26vw;
+    max-width: 50vw;
+    opacity: 1; 
+     animation: logoAnimation 2s ease-in-out ;
+    
+  }
+}
+@media screen and (min-width: 601px) and (max-width:899px) {
+
+
+  .moving-dots {
+    position: absolute;
+    top: 24vh;
+    left: 35vw;
+    width: 30vw;
+    height: 30vh;
+  }
+  .logo {
+    position: absolute;
+    top: 29vh;
+    left: 30vw;
+    max-width: 40vw;
+    opacity: 1; 
+     animation: logoAnimation 2s ease-in-out ;
+    
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width:1200px) {
+  .moving-dots {
+    position: absolute;
+    top: 22vh;
+    left: 35vw;
+    width: 30vw;
+    height: 30vh;
+  }
 }
