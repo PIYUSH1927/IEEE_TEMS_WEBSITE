@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="home.css">
 
   <script src="https://kit.fontawesome.com/03e1a34bf0.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -118,9 +119,73 @@
 
 
 <!-- Blogs Section Start -->
-<section id="Blogs">
-    <h1>Blogs</h1>
-</section>
+<br><br><h1 style="text-align: center; padding-bottom: 40px; color: white;">
+    <span style="background-image: linear-gradient(to right, transparent 10%, green 10%, green 90%, transparent 90%);  background-size: 100% 5px; background-repeat: no-repeat; background-position: 0 100%;">
+      Blogs
+    </span>
+  </h1>
+<section id="Blogs" class="blog-section">
+    <button id="prevButton" class="arrow-button">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    
+    <div class="options">
+        <div class="option" style="--optionBackground: url(Blogposts/Snapinsta.app_391089358_187357391062010_7940396338877248259_n_1080.jpg);">
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="sub"><a href="https://ieee-tems-blogs.medium.com/the-linux-weatherman-crafting-accurate-reports-from-scratch-8887a0b32a77" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 5px 15px; border-radius: 15px; " >Link</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground: url(Blogposts/shellscript\ blog.jpg);">
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="sub"><a href="https://ieee-tems-blogs.medium.com/shell-scripting-to-schedule-your-day-with-crontab-and-notify-send-b320f0a8f57a" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 5px 15px; border-radius: 15px; " >Link</a></div>
+                </div>
+            </div>
+       
+        </div>
+        <div class="option active" style="--optionBackground: url(Blogposts/responsive\ web\ design\ blog.jpg);">
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="sub"><a href="https://ieee-tems-blogs.medium.com/responsive-web-design-creating-websites-for-all-devices-96aad294def1" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 3px 15px; border-radius: 15px; " >Link</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground: url(Blogposts/numpy\ blog.jpg);">
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="sub"><a href="https://ieee-tems-blogs.medium.com/mastering-the-basics-of-numpy-a-step-by-step-guide-for-beginners-800bbd2337a6" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 5px 15px; border-radius: 15px; " >Link</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground: url(Blogposts/tailwind\ blog.jpg);">
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="sub"><a href="https://ieee-tems-blogs.medium.com/tailwind-more-than-just-inline-css-bd1a6a01a54c" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 5px 15px; border-radius: 15px;" >Link</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="nextButton" class="arrow-button">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+</section><br><br>
 <!-- Blogs Section End -->
 
 
@@ -196,6 +261,35 @@
          }
          contentArea.innerHTML = content;
      }
+
+     /* Blog seciton */
+     $(".option").click(function () {
+                $(".option").removeClass("active");
+                $(this).addClass("active");
+            });
+            $("#prevButton").click(function () {
+            var activeCard = $(".option.active");
+            var prevCard = activeCard.prev(".option");
+
+            if (prevCard.length === 0) {
+                prevCard = $(".option:last");
+            }
+
+            activeCard.removeClass("active");
+            prevCard.addClass("active");
+        });
+
+        $("#nextButton").click(function () {
+            var activeCard = $(".option.active");
+            var nextCard = activeCard.next(".option");
+
+            if (nextCard.length === 0) {
+                nextCard = $(".option:first");
+            }
+
+            activeCard.removeClass("active");
+            nextCard.addClass("active");
+        });
    </script>
 </body>
 </html>
