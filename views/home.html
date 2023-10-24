@@ -118,11 +118,11 @@
 <!-- Blogs Section Start -->
 <br><br><h1 style="text-align: center; padding-bottom: 40px; color: white;">
     <span style="background-image: linear-gradient(to right, transparent 10%, green 10%, green 90%, transparent 90%);  background-size: 100% 5px; background-repeat: no-repeat; background-position: 0 100%;">
-      Blogs
+      Our Blogs
     </span>
   </h1>
 <section id="Blogs" class="blog-section">
-    <button id="prevButton" class="arrow-button">
+    <button id="prevButton" class="arrow-button mx-4">
         <i class="fas fa-arrow-left"></i>
     </button>
     
@@ -137,13 +137,24 @@
                 </div>
             </div>
         </div>
-        <div class="option" style="--optionBackground: url(Blogposts/shellscript\ blog.jpg);">
+        <div class="option" style="--optionBackground: url(Blogposts/Shellscripting.jpg);">
             <div class="label">
                 <div class="icon">
                     <i class="fa fa-globe" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <div class="sub"><a href="https://ieee-tems-blogs.medium.com/shell-scripting-to-schedule-your-day-with-crontab-and-notify-send-b320f0a8f57a" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 5px 15px; border-radius: 15px; " >Link</a></div>
+                </div>
+            </div>
+       
+        </div>
+        <div class="option" style="--optionBackground: url(Blogposts/shellscript\ blog.jpg);">
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="sub"><a href="https://ieee-tems-blogs.medium.com/effortless-email-sending-on-linux-a-step-by-step-project-guide-fb557b6bda8" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 5px 15px; border-radius: 15px; " >Link</a></div>
                 </div>
             </div>
        
@@ -178,11 +189,27 @@
                 </div>
             </div>
         </div>
+        
+        <div class="option" style="--optionBackground: url(Blogposts/bootstrap.jpg);">
+            <div class="label">
+                <div class="icon text-dark ">
+                    <i  class="fa fa-globe " aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="sub"><a href="https://ieee-tems-blogs.medium.com/introduction-guide-to-bootstrap-c2149dcd80cf" target="_blank" style="text-decoration: none; display: inline-block; background-color: white; color: rgb(34, 119, 34); padding: 5px 15px; border-radius: 15px;" >Link</a></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <button id="nextButton" class="arrow-button">
+    <button id="nextButton" class="arrow-button mx-4">
         <i class="fas fa-arrow-right"></i>
-    </button>
-</section><br><br>
+    </button>  
+</section>
+<br>
+<br>
+<div class="mb-5 text-center">
+    <a style="text-decoration: none; " href="https://ieee-tems-blogs.medium.com/"><button style="border-radius: 7px; padding: 5px 10px 5px 10px;background-color:green; font-size: larger; font-weight: bold; color: black; ;">View More</button></a>
+</div>
 <!-- Blogs Section End -->
 
 
@@ -232,7 +259,7 @@
 
     <script>
 
-        
+        /* Domain seciton start*/
 
         document.getElementById("webdev-section").querySelector(".nav-link").focus();
  
@@ -259,34 +286,8 @@
          contentArea.innerHTML = content;
      }
 
-     /* Blog seciton */
-     $(".option").click(function () {
-                $(".option").removeClass("active");
-                $(this).addClass("active");
-            });
-            $("#prevButton").click(function () {
-            var activeCard = $(".option.active");
-            var prevCard = activeCard.prev(".option");
+     /* Domain seciton end */
 
-            if (prevCard.length === 0) {
-                prevCard = $(".option:last");
-            }
-
-            activeCard.removeClass("active");
-            prevCard.addClass("active");
-        });
-
-        $("#nextButton").click(function () {
-            var activeCard = $(".option.active");
-            var nextCard = activeCard.next(".option");
-
-            if (nextCard.length === 0) {
-                nextCard = $(".option:first");
-            }
-
-            activeCard.removeClass("active");
-            nextCard.addClass("active");
-        });
    </script>
 </body>
 </html>
