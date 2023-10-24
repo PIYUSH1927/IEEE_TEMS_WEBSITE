@@ -1,9 +1,10 @@
+@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
 body{
-  color: white;
-  background-color:rgb(22, 22, 22);
-}
-
-/*Home Section CSS*/
+    color: white;
+    background-color:rgb(22, 22, 22);
+ }
+  
+  /*Home Section CSS*/
 :root {
   --background-rgb: 2 6 23;
   --background-light-rgb: 250 0 250;
@@ -136,71 +137,193 @@ body{
 }
 
 
-
-/* Domain section start */
-.nav-link:focus {
-    outline: none; 
-    color: black !important; 
-  }
-.nav-link {
-    font-style: "Ubuntu";
-    font-weight: bold;
-    color: white;
-}
-.nav-link:hover{
-    background-color: white;
-    color: black;
-}
-.domaintext{
-  font-size: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.border{
-  margin-left: 12vw;
-   width: 72%; 
-}
-.icons{
-  font-size: 2em;
-}
-
-
-@media screen and (max-width: 1200px) {
-  .txt{
-    display: none;
-  }
-  .nav-link:focus {
-    outline: none; 
-    background-color: white !important; 
-  }
   
-}
-@media screen and (min-width: 601px) and (max-width:900px) {
+  /* Domain section start */
+  .nav-link:focus {
+      outline: none; 
+      color: black !important; 
+    }
+  .nav-link {
+      font-style: "Ubuntu";
+      font-weight: bold;
+      color: white;
+  }
+  .nav-link:hover{
+      background-color: white;
+      color: black;
+  }
   .domaintext{
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 20px;
     padding-right: 20px;
   }
   .border{
-    margin-left: 5vw;
-     width: 90%; 
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-  .domaintext{
-    font-size: 14px;
-    padding-left: 2px;
-    padding-right: 2px;
-  }
-  .border{
-    margin:auto;
-     width: 93%; 
+    margin-left: 12vw;
+     width: 72%; 
   }
   .icons{
-    font-size: 1.5em;
+    font-size: 2em;
+  }
+  
+  
+  @media screen and (max-width: 1200px) {
+    .txt{
+      display: none;
+    }
+    .nav-link:focus {
+      outline: none; 
+      background-color: white !important; 
+    }
+    
+  }
+  @media screen and (min-width: 601px) and (max-width:900px) {
+    .domaintext{
+      font-size: 16px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .border{
+      margin-left: 5vw;
+       width: 90%; 
+    }
+  
+  }
+  
+  @media screen and (max-width: 600px) {
+    .domaintext{
+      font-size: 14px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+    .border{
+      margin:auto;
+       width: 93%; 
+    }
+    .icons{
+      font-size: 1.5em;
+    }
+  
+  }  /* Domain section end */
+
+
+
+  /* Blog Section */
+  .blog-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: 0.25s;
+  }
+  
+  .blog-section .options {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      overflow: hidden;
+      min-width: 700px;
+      max-width: 1000px;
+      width: calc(100% - 100px);
+      height: 440px;
+  }
+  .arrow-button{
+    background-color: green;
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%; 
+    font-size: 21px; 
+}
+ .blog-section .options .option {
+      position: relative;
+      overflow: hidden;
+      min-width: 60px;
+      margin: 10px;
+      background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+      background-size: auto 120%;
+      background-position: center;
+      cursor: pointer;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  }
+  
+  .option:nth-child(1) {
+      --defaultBackground: #ed5565;
+  }
+  .option:nth-child(2) {
+      --defaultBackground: #fc6e51;
+  }
+  .option:nth-child(3) {
+      --defaultBackground: #ffce54;
+  }
+  .option:nth-child(4) {
+      --defaultBackground: #2ecc71;
+  }
+  .option:nth-child(5) {
+      --defaultBackground: #5d9cec;
+  }
+  .option:nth-child(6) {
+      --defaultBackground: #ac92ec;
+  }
+  
+  .option.active {
+      flex-grow: 10000;
+      transform: scale(1);
+      max-width: 600px;
+      margin: 0px;
+      border-radius: 40px;
+      background-size: auto 100%;
+  }
+  
+  .option.active .label {
+      bottom: 20px;
+      left: 20px;
+  }
+  .option.active .label .info > div {
+      left: 0px;
+      opacity: 1;
+  }
+  .option:not(.active) {
+      flex-grow: 1;
+      border-radius: 30px;
+  }
+  
+  .option:not(.active) .label {
+      bottom: 10px;
+      left: 10px;
+  }
+  .option:not(.active) .label .info > div {
+      left: 20px;
+      opacity: 0;
+  }
+  
+  .label {
+      display: flex;
+      position: absolute;
+      right: 0px;
+      height: 40px;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  }
+  
+  .icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      min-width: 40px;
+      max-width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: white;
+      color: var(--defaultBackground);
+  }
+  
+  .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 7px;
+      color: white;
+      font-weight: bold;
   }
 
-}
-/* Domain section end */
+/* blog section ends */

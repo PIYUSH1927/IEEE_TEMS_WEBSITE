@@ -1,20 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 
+const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 
-
+dotenv.config()
 app.use(express.static('public'));
  
 app.use(bodyParser.urlencoded({ extended:true }));
 
-const DB = 'mongodb+srv://padiapiyush12:newpassword12@cluster0.jhxrht3.mongodb.net/contactdata?retryWrites=true&w=majority'
-
-
-mongoose.connect(DB, {
+mongoose.connect(process.env.DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(()=>{
