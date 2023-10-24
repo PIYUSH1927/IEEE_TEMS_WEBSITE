@@ -3,6 +3,138 @@ body{
   background-color:rgb(22, 22, 22);
 }
 
+/*Home Section CSS*/
+:root {
+  --background-rgb: 2 6 23;
+  --background-light-rgb: 250 0 250;
+  
+  --border-rgb: 255 255 255;
+  --border: 1px solid rgb(var(--border-rgb) / 20%);
+  
+  --hyperplexed-main-rgb: 0 0 0;
+  --hyperplexed-main-light-rgb: 240 0 230;
+  --hyperplexed-secondary-rgb: 200 0 200;
+    
+  --card-size: 700px;
+  --font-size: 0.5rem;
+  --logo-size: calc(var(--card-size) * 0.3);
+}
+
+#homeeffect {
+  background: rgb(255,255,255);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Noto Sans', sans-serif;
+  filter: invert(100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card-track {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+}
+
+.card-image > img {
+  width: 20vw;
+}
+
+.card-gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: radial-gradient(
+    rgb(var(--background-light-rgb)) 90%, 
+    rgb(var(--hyperplexed-main-rgb)) 90%, 
+    rgb(var(--hyperplexed-main-light-rgb)),
+    rgb(var(--hyperplexed-secondary-rgb))
+  );
+  mix-blend-mode: lighten; 
+  pointer-events: none;
+  z-index: 3;
+}
+
+.card-letters {
+  --x: 0px;
+  --y: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  color: black;
+  font-size: var(--font-size);
+  font-weight: 500;
+  word-wrap: break-word;
+  opacity: 0;
+  transition: opacity 400ms;
+  -webkit-mask-image: radial-gradient(
+    calc(var(--card-size) * 0.8) circle at var(--x) var(--y), 
+    rgb(255 255 255) 20%, 
+    rgb(255 255 255 / 25%), 
+    transparent
+  );
+  scale: 1.03;
+}
+
+.card:hover .card-letters {
+  opacity: 1;
+}
+
+@media(max-width: 600px) {
+  :root {
+    --card-size: 340px;
+  }
+  
+  .card-track {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #homeeffect {
+    width: 100vw;
+  }
+
+  .card-image > img {
+    width: 40vh;
+  }
+}
+
 
 
 /* Domain section start */
