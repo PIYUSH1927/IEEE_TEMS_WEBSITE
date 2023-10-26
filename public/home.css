@@ -1,143 +1,217 @@
 @import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 body{
     color: white;
     background-color:rgb(22, 22, 22);
+    cursor: none;
  }
   
   /*Home Section CSS*/
-:root {
-  --background-rgb: 2 6 23;
-  --background-light-rgb: 250 0 250;
-  
-  --border-rgb: 255 255 255;
-  --border: 1px solid rgb(var(--border-rgb) / 20%);
-  
-  --hyperplexed-main-rgb: 0 0 0;
-  --hyperplexed-main-light-rgb: 240 0 230;
-  --hyperplexed-secondary-rgb: 200 0 200;
-    
-  --card-size: 700px;
-  --font-size: 0.5rem;
-  --logo-size: calc(var(--card-size) * 0.3);
-}
 
-#homeeffect {
-  background: rgb(255,255,255);
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  font-family: 'Noto Sans', sans-serif;
-  filter: invert(100%);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.card-track {
-  width: 100vw;
-  height: auto;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.card-wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.card-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 4;
-}
-
-.card-image > img {
-  width: 20vw;
-}
-
-.card-gradient {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: radial-gradient(
-    rgb(var(--background-light-rgb)) 90%, 
-    rgb(var(--hyperplexed-main-rgb)) 90%, 
-    rgb(var(--hyperplexed-main-light-rgb)),
-    rgb(var(--hyperplexed-secondary-rgb))
-  );
-  mix-blend-mode: lighten; 
-  pointer-events: none;
-  z-index: 3;
-}
-
-.card-letters {
-  --x: 0px;
-  --y: 0px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 100%;
-  width: 100%;
-  color: black;
-  font-size: var(--font-size);
-  font-weight: 500;
-  word-wrap: break-word;
-  opacity: 0;
-  transition: opacity 400ms;
-  -webkit-mask-image: radial-gradient(
-    calc(var(--card-size) * 0.8) circle at var(--x) var(--y), 
-    rgb(255 255 255) 20%, 
-    rgb(255 255 255 / 25%), 
-    transparent
-  );
-  scale: 1.03;
-}
-
-.card:hover .card-letters {
-  opacity: 1;
-}
-
-@media(max-width: 600px) {
-  :root {
-    --card-size: 340px;
+  #Home{
+    overflow-x: hidden;
   }
-  
-  .card-track {
-    height: 100vh;
+
+  #homebg{
+    width: 100%;
+    height: 100%;  
+    overflow: hidden;
+  }
+
+  #homebg > video{
     width: 100vw;
+    filter: opacity(0.5);
   }
 
-  #homeeffect {
-    width: 100vw;
+  #homecontent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .card-image > img {
-    width: 40vh;
+  #htitle{
+    font-family: 'Abril Fatface';
+    font-size: 5.5em;
+    font-weight: 100;
+    margin: 0;
+    color: white;
   }
-}
 
+  #hchanging{
+    font-family: 'Poppins';
+    font-size: 2.3em;
+    font-weight: 100;
+    width: 30vw;
+    left: 35vw;
+    align-items: center;
+    text-align: center;
+    margin: 0; 
+    color: white;
+    animation: changing 1s infinite;
+  }
 
+  .hword {
+    margin: 0;
+    width: 30vw;
+    left: 35vw;
+    top: 55vh;
+    padding: 0;
+    position: absolute;
+    opacity: 0;
+  }
   
+  .letter {
+    display: inline-block;
+    position: relative;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+  }
+  
+  .letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  
+  .letter.behind {
+    transform: rotateX(-90deg);
+  }
+  
+  .letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  #hicons{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    height: 40vh;
+    top: 30vh;
+  }
+
+  .hicon{
+    font-size: 3.5vh;
+    margin-top: 7.375vh;
+    margin-left: 10px;
+    color: #999b99;
+  }
+
+  .hicon:hover{
+    color: white;
+  }
+
+  #hlogo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+  }
+
+  #hlogo > img{
+    width: 12vh;
+  }
+
+  #hmenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+  }
+
+  #hmenu > i{
+    font-size: 4vh;
+  }
+
+  @media screen and (max-width: 1200px) {
+    #homebg > video{
+      height: 100vh;
+      width: auto;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width:900px) {
+    #htitle{
+      font-size: 4em;
+    }
+  
+    #hchanging{
+      font-size: 1.5em;
+      width: 30vw;
+      left: 35vw;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #htitle{
+      font-size: 3em;
+    }
+  
+    #hchanging{
+      font-size: 1em;
+      width: 30vw;
+      left: 35vw;
+    }
+
+    #hicons{
+      flex-direction: row;
+      z-index: 10;
+      height: 40vh;
+      bottom: 0;
+      top: 88vh;
+      left: 30vw;
+    }
+
+    .hicon{
+      font-size: 3.5vh;
+      margin-top: 7.375vh;
+      margin-left: 7.375vw;
+    }
+  }
+  
+  /* Home CSS End */
+
+  /* Cursor CSS start*/
+  #circle {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999; /* Ensure the circle is on top of other elements */
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease-out;
+  }
+  .enlarge {
+    width: 80px;
+    height: 80px;
+  }  
+  /* cursor css end */
+
+
   /* Domain section start */
   .nav-link:focus {
       outline: none; 

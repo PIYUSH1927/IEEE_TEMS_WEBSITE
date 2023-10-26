@@ -21,30 +21,43 @@
 </head>
 <body>
 
+<div id="circle"></div>
 
 <!-- Home Section Start -->
 <section id="Home">
-    <div id = "homeeffect">
-        <div class="card-track">
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-image">
-                  <img src="logo2.png">
-                </div>
-                <div class="card-gradient"></div>
-                <div class="card-letters"></div>
-              </div>
-            </div>
+    <div id = "homebg">
+        <video autoplay muted loop id="myVideo">
+            <source src="homebg.mp4" type="video/mp4">
+    </div>
+    <div id = "homecontent">
+        <div id = "htitle">
+            IEEE TEMS
+        </div>
+        <div id = "hchanging">
+            <span class="hword">INNOVATIVE</span>
+            <span class="hword">CONNECTED</span>
+            <span class="hword">EMPOWERING</span>
+        </div>
+        <div id = "hlogo">
+            <img src="logo.png" alt="IEEE TEMS Logo">
+        </div>
+        <div id = "hicons">
+            <i class="fa-brands fa-medium hicon"></i>
+            <i class="fa-brands fa-instagram hicon"></i>
+            <i class="fa-brands fa-linkedin hicon"></i>
         </div>
     </div>
 </section>
+<div id = "hmenu">
+    <i class="fa-solid fa-bars"></i>
+</div>
 <!-- Home Section End -->
 
 
 
 <!-- About Section Start -->
 <section id="About">
-    <h1>About</h1>
+    <h1 class = "hover-enlarge">About</h1>
 </section>
 <!-- About Section End -->
 
@@ -263,9 +276,7 @@
 <a href="/contributors">Contributors</a>
 
 
-
 <!-- Javascript -->
-
 <script src="home.js"></script>
 
 

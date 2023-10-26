@@ -32,27 +32,84 @@ nextCard.addClass("active");
 
 
 // Home Section
-const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+var words = document.getElementsByClassName('hword');
+var wordArray = [];
+var currentWord = 0;
 
-const randomChar = () => chars[Math.floor(Math.random() * (chars.length - 1))],
-      randomString = length => Array.from(Array(length)).map(randomChar).join("");
-
-const card = document.querySelector(".card"),
-      letters = card.querySelector(".card-letters");
-
-const handleOnMove = e => {
-  const rect = card.getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top;
-
-  letters.style.setProperty("--x", `${x}px`);
-  letters.style.setProperty("--y", `${y}px`);
-
-  letters.innerText = randomString(50000);    
+words[currentWord].style.opacity = 1;
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
 }
 
-card.onmousemove = e => handleOnMove(e);
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  for (var i = 0; i < cw.length; i++) {
+    animateLetterOut(cw, i);
+  }
+  
+  for (var i = 0; i < nw.length; i++) {
+    nw[i].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, i);
+  }
+  
+  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+}
 
-card.ontouchmov
+function animateLetterOut(cw, i) {
+  setTimeout(function() {
+		cw[i].className = 'letter out';
+  }, i*80);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function() {
+		nw[i].className = 'letter in';
+  }, 340+(i*80));
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 2000);
+
 
 // Home Section end
+
+
+// Cursor effects
+const circle = document.getElementById('circle');
+
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  circle.style.left = x + 'px';
+  circle.style.top = y + 'px';
+});
+
+const elementsToEnlarge = document.querySelectorAll('.hover-enlarge');
+
+elementsToEnlarge.forEach((element) => {
+  element.addEventListener('mouseenter', () => {
+    circle.classList.add('enlarge');
+  });
+
+  element.addEventListener('mouseleave', () => {
+    circle.classList.remove('enlarge');
+  });
+});
