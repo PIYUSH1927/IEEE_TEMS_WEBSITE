@@ -63,7 +63,7 @@ const userSchema2 = new mongoose.Schema({
 const UserN = mongoose.model('UserN', userSchema2);
 
 
-app.post('/index', async (req, res) => {
+app.post('/home', async (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;

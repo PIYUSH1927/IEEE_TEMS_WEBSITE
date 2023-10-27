@@ -1,3 +1,9 @@
+window.onload = function () {
+  if (window.scrollY > 0) {
+      window.scrollTo(0, 0);
+  }
+}
+
 //Blog Section start
 
 $(".option").click(function () {

@@ -401,3 +401,278 @@ body{
   }
 
 /* blog section ends */
+/* contact section starts */
+#Contact{
+  overflow: hidden;
+  padding-left: 40px;
+}
+
+.Contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+ 
+}
+
+.Contact-box-left{
+  position: relative;
+  width: 40%;
+}
+
+.Contact-box-image{
+  width: 80%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+  position: relative;
+  margin-left: 10%;
+}
+
+.Contact-box-right{
+  position: relative;
+  width: 50%;
+}
+
+.contact-input{
+  padding: 15px;
+  margin: 10px;
+}
+
+.contact-inputs {
+  border: none;
+  border-bottom: 1px solid green;
+  background: transparent;
+  outline: none;
+  height: 30px;
+  color: white;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.5s;
+  padding: 10px 0;
+}
+
+.contact-input-button {
+  background: green;
+  height: 40px;
+  width: 100%;
+  padding: 0 20px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 10px 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  #Contact{
+  
+    padding-left: 0px;
+  }
+  .Contact-box-image{
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+  } 
+}
+
+@media screen and (min-width: 601px) and (max-width:900px) {
+  #Contact{
+  
+    padding-left: 0px;
+  }
+  .Contact-box-image{
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #Contact{
+  
+    padding-left: 0px;
+  }
+  .Contact-box{
+    flex-direction: column;
+  }
+  .Contact-box-left{
+    width: 100%;
+  }
+  .Contact-box-image{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .Contact-box-right{
+    width: 100%;
+  }
+  .contact-input{
+    padding: 10px;
+    margin: 5px;
+  }
+  .contact-inputs{
+    height: 20px;
+    font-size: 12px;
+  }
+  .contact-input-button{
+    height: 30px;
+    font-size: 20px;
+  }
+}
+/* contact section ends */
+
+/* Memories section starts */
+#Memories h1{
+  position: relative;
+  color: white;
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  padding-top: 10px;
+}
+
+.carousel-item{
+  max-height: 85vh;    
+  padding-top: 30px;
+  margin-top: 20px;
+}
+
+.carousel-control-prev
+{
+  color: #095109c1;
+}
+
+.carousel-indicators .active {
+  background-color: #2c8c2c; 
+}
+
+.mimg
+{
+  border-radius: 40px;
+  height: 39vw;
+  width: 125vh;
+  
+}
+
+#Memories h3{
+  color:rgb(164, 255, 26);
+  font-weight: 700;
+
+}
+
+
+.header
+{
+  border: 7px #3DEB00 solid;
+  margin-left: 600px;
+  margin-right: 600px;
+  border-radius: 50px;
+  margin-top: -190px;
+  z-index:2;
+  
+}
+
+.svg
+{
+  height: 40px;
+  width: 40px;
+}
+
+@media screen and (min-width: 850px) and (max-width:1200px) {
+  .mimg
+  {
+    border-radius: 40px;
+    height: 49vw;
+    width: 125vh;
+    
+  }
+  #Memories h3{
+    position: relative;
+    top:49px ;
+  }
+  
+}
+@media screen and (min-width: 700px) and (max-width:849px) {
+  .mimg
+  {
+    border-radius: 40px;
+    height: 39vw;
+    width: 85vh;
+    
+  }
+  #Memories h3{
+    font-weight: 700;
+    
+    position: relative;
+    top:49px ;
+  }
+  
+}
+@media screen and (min-width: 551px) and (max-width:699px) {
+  .mimg
+  {
+    border-radius: 40px;
+    height: 49vw;
+    width: 75vh;
+    
+    
+  }
+  #Memories h3{
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    top:43px ;
+  }
+  
+}
+@media screen and (min-width: 480px) and (max-width:550px) {
+  .mimg
+  {
+    border-radius: 40px;
+    height: 54vw;
+    width: 65vh;
+    
+  }
+  #Memories h3{
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    top:43px ;
+  }
+  
+}
+@media screen and (max-width: 479px) {
+  .mimg
+  {
+    border-radius: 40px;
+    height: 54vw;
+    width: 50vh;
+
+    
+  }
+  #Memories h3{
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    top:43px ;
+  
+  }
+  .svg
+{
+  height: 30px;
+  width: 30px;
+}
+}
+
+
+
+/* Memories section ends */
