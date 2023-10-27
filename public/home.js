@@ -91,6 +91,12 @@ changeWord();
 setInterval(changeWord, 2000);
 
 
+let sideMenu = document.getElementById("sideMenu");
+let hmenu = document.getElementById("menuIcon");
+hmenu.onclick = function () {
+  sideMenu.classList.toggle("open-menu");
+}
+
 // Home Section end
 
 
