@@ -365,29 +365,29 @@
             <img src="ContactUsLogo.png" class="Contact-box-image">
         </div>
         <div class="Contact-box-right">
-            <form class="Contact-form" method="post" action="/home">
+            <form class="Contact-form" name="contactForm" method="post" action="/home">
                 <div class="contact-input" >
                     <label style="font-size: 20px ; font-weight:700;"> Name: </label>
                     <br>
-                    <input value type="text" name="name" required class="contact-inputs">
+                    <input type="text" id="name" name="name" required class="contact-inputs">
                 </div>
                 <div class="contact-input" >
                     <label style="font-size: 20px ; font-weight:700;"> Email: </label>
                     <br>
-                    <input value type="text" name="email" required class="contact-inputs">
+                    <input  type="text" id="email" name="email" required class="contact-inputs">
                 </div>
                 <div class="contact-input" >
                     <label style="font-size: 20px ; font-weight:700;"> Phone No: </label>
                     <br>
-                    <input value type="text" name="mobile" required class="contact-inputs">
+                    <input type="text" id="mobile" name="mobile" required class="contact-inputs">
                 </div>
                 <div class="contact-input" >
                     <label style="font-size: 20px ; font-weight:700;"> Message: </label>
                     <br>
-                    <input value type="text" name="message" required class="contact-inputs">
+                    <input  type="text" id="message" name="message" required class="contact-inputs">
                 </div>
                 <div class="contact-input" >
-                    <input class="contact-input-button" type="submit" value="Send" >
+                    <input class="contact-input-button" type="submit"  >
                 </div>
             </form>
         </div>

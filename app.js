@@ -66,8 +66,9 @@ const UserN = mongoose.model('UserN', userSchema2);
 app.post('/home', async (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
-    const message = req.body.message;
     const mobile = req.body.mobile;
+    const message = req.body.message;
+    
 
     if (!isValidEmail(email)) {
         return res.status(400).send('Invalid email address');
@@ -87,7 +88,7 @@ app.post('/home', async (req, res) => {
     try {
       await newUser.save();
       res.sendFile(path.join(__dirname, 'views', 'home.html'));
-      alert("Your response have been recorded");
+      
     } catch (error) {
       console.error(error);
       res.status(500).send('Error saving data to the database');
