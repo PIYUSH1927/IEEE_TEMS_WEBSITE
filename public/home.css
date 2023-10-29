@@ -334,8 +334,11 @@ body{
     .nav-link:focus {
       outline: none; 
       background-color: white !important; 
+
     }
-    
+     .icons{
+      padding-right: 9px;
+    }
   }
   @media screen and (min-width: 601px) and (max-width:900px) {
     .domaintext{
@@ -346,6 +349,9 @@ body{
     .border{
       margin-left: 5vw;
        width: 90%; 
+    }
+    .icons{
+      padding-right: 7px;
     }
   
   }
@@ -362,6 +368,7 @@ body{
     }
     .icons{
       font-size: 1.5em;
+      padding-right: 5px;
     }
   
   }  /* Domain section end */
@@ -651,7 +658,9 @@ body{
 }
 
 #Memories h3{
-  color:rgb(164, 255, 26);
+  display: inline;
+  background-color:black;
+  color:white;
   font-weight: 700;
 
 }
@@ -1400,7 +1409,7 @@ section.special header.major h2:after {
     filter: grayscale(0);
 }
 
-.content{
+.content1{
     position: absolute;
     inset: 0;
     overflow: hidden;
@@ -1409,7 +1418,7 @@ section.special header.major h2:after {
     align-items: center;
 }
 
-.content:before{
+.content1:before{
     content: '';
     position: absolute;
     inset: 70px;
@@ -1417,12 +1426,12 @@ section.special header.major h2:after {
     border-left: 5px solid #73f373;
     border-right: 5px solid #fff;
     border-radius: 50%;
-    animation: anim1 10s linear infinite;
+    animation: anim12 10s linear infinite;
     z-index: 1;
     pointer-events: none;
 }
 
-@keyframes anim1{
+@keyframes anim12{
     0%
     {
         rotate: 0deg;
@@ -1433,7 +1442,7 @@ section.special header.major h2:after {
     }
 }
 
-.content:after{
+.content1:after{
     content: '';
     position: absolute;
     inset: 125px;
@@ -1441,12 +1450,12 @@ section.special header.major h2:after {
     border-top: 5px solid #459d5f;
     border-bottom: 5px solid #f1faee;
     border-radius: 50%;
-    animation: anim2 5s linear infinite;
+    animation: anim22 5s linear infinite;
     z-index: -100;
     pointer-events: none;
 }
 
-@keyframes anim2{
+@keyframes anim22{
     0%
     {
         rotate: 360deg;

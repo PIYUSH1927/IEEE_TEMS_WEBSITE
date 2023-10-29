@@ -7,51 +7,9 @@
 #main {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
   height: 100vh;
 }
 
-#toggle-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.toggle-buttons {
-  width: 70%;
-  display: flex;
-  background: linear-gradient(#191A1D, #373C42);
-  border-radius: 60px; 
-  justify-content: space-between;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.status-switch {
-  background: linear-gradient(#191A1D, #373C42);
-  cursor: pointer;
-  width: 50%; 
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 30px; 
-  font-size: 14px; 
-}
-
-#home:checked + .status-switch {
-  background: linear-gradient(#15581B, #0DD42E, #072A0E);
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
-}
-
-#contributors:checked + .status-switch {
-  background: linear-gradient(#15581B, #0DD42E, #072A0E);
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
-  order: 2;
-}
 
 .contributors {
   margin-top: 50px;
@@ -61,6 +19,7 @@ input[type="radio"] {
   letter-spacing: -1px;
   font-size: 50px;
   text-align: center;
+ 
 }
 
 .contributors .row {
