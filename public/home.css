@@ -494,6 +494,39 @@ body{
       font-weight: bold;
   }
 
+.carousel-item img{
+  max-width: 90vw ;
+}
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+@media only screen and (max-width: 600px) {
+  .mobile-blogs {
+      display: block; /* Display mobile section */
+  }
+
+  .blog-section-desktop {
+      display: none; /* Hide desktop section on mobile */
+  }
+}
+@media only screen and (min-width: 601px) {
+  .mobile-blogs {
+      display: none; /* Hide mobile section on desktop */
+  }
+
+  .blog-section-desktop {
+      display: flex; /* Display desktop section */
+  }
+}
 /* blog section ends */
 /* contact section starts */
 #Contact{

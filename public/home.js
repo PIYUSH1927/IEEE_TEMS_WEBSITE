@@ -31,6 +31,9 @@ activeCard.removeClass("active");
 nextCard.addClass("active");
 });
 
+
+
+
 //Blog Section end
 
 
