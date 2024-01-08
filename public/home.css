@@ -1041,7 +1041,7 @@ section.special header.major h2:after {
 
 .card{
   width: 17vw;
-  height:50vh;
+  height:47vh;
   overflow: hidden;
   background-color: transparent;
   border: none;
@@ -1118,7 +1118,7 @@ section.special header.major h2:after {
       opacity: 0.5;
   }
   100%{
-      top: -20%;
+      top: -30%;
   }
 }
 
