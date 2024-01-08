@@ -528,6 +528,20 @@ body{
       display: flex; /* Display desktop section */
   }
 }
+.blogs-button{
+  border-radius: 7px; 
+  padding: 5px 10px 5px 10px;
+  background-color:green; 
+  font-size: larger; 
+  font-weight: bold;
+  color:black ;   
+}
+.blogs-button:hover{
+  background-color: white;
+}
+#nextButton:hover,#prevButton:hover{
+  background-color: white;
+}
 /* blog section ends */
 /* contact section starts */
 #Contact{
