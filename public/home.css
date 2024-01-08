@@ -292,11 +292,21 @@ body{
     z-index: 999; /* Ensure the circle is on top of other elements */
     mix-blend-mode: difference;
     transition: transform 0.1s ease-out;
+    display: block;
   }
   .enlarge {
     width: 80px;
     height: 80px;
   }  
+
+  @media screen and (max-width: 800px) {
+    #circle {
+      display: none;
+    }
+    body{
+      cursor: pointer;
+    }
+  }
   /* cursor css end */
 
 
