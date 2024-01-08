@@ -1288,6 +1288,17 @@ section.special header.major h2:after {
   .social .fa-linkedin{
     padding: 0.2rem 0.28rem;
   }
+
+  @keyframes anim{
+    0%{
+        top: 0;
+        opacity: 0.5;
+    }
+    100%{
+        top: -25%;
+    }
+  }
+  
 }
 
 @media screen and (max-width: 400px){
@@ -1348,6 +1359,17 @@ section.special header.major h2:after {
   .social .fa-linkedin{
     padding: 0.3rem 0.38rem;
   }
+
+  @keyframes anim{
+    0%{
+        top: 0;
+        opacity: 0.5;
+    }
+    100%{
+        top: -25%;
+    }
+  }
+  
 }
 
 /* Board CSS ends */
