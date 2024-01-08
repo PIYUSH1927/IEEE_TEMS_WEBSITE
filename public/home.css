@@ -210,6 +210,7 @@ body{
       padding: 15vh 0;
       box-sizing: border-box;
       background-image: linear-gradient(0deg,rgba(113, 112, 112, 0.3),rgba(0, 0, 0, 0.3));
+      backdrop-filter: blur(5px);
       display: flex;
       flex-flow: column nowrap;
       box-shadow: 5px 0px 10px rgba(17, 26, 41, 0.6);
@@ -494,6 +495,39 @@ body{
       font-weight: bold;
   }
 
+.carousel-item img{
+  max-width: 90vw ;
+}
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+@media only screen and (max-width: 600px) {
+  .mobile-blogs {
+      display: block; /* Display mobile section */
+  }
+
+  .blog-section-desktop {
+      display: none; /* Hide desktop section on mobile */
+  }
+}
+@media only screen and (min-width: 601px) {
+  .mobile-blogs {
+      display: none; /* Hide mobile section on desktop */
+  }
+
+  .blog-section-desktop {
+      display: flex; /* Display desktop section */
+  }
+}
 /* blog section ends */
 /* contact section starts */
 #Contact{
@@ -1007,7 +1041,7 @@ section.special header.major h2:after {
 
 .card{
   width: 17vw;
-  height:50vh;
+  height:47vh;
   overflow: hidden;
   background-color: transparent;
   border: none;
@@ -1015,9 +1049,9 @@ section.special header.major h2:after {
 
 .card__1{
   position: relative;
-  width: 17vw;
-  height:33vh;
-  border-radius: 25px;
+  width: 15vw;
+  height:29vh;
+  border-radius: 23px;
   justify-content: center;
   align-content: center;
   display: flex;
@@ -1032,8 +1066,8 @@ section.special header.major h2:after {
 
 .image{
   position: relative;
-  width: 14vw;
-  height: 14vw;
+  width: 12.5vw;
+  height: 12.5vw;
   border-radius: 50%;
   margin: 0 auto;
   transition: all 1s ease;
@@ -1041,8 +1075,8 @@ section.special header.major h2:after {
 }
 
 .card-img{
-  width: 14vw;
-  height: 14vw;
+  width: 12.5vw;
+  height: 12.5vw;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
@@ -1084,7 +1118,7 @@ section.special header.major h2:after {
       opacity: 0.5;
   }
   100%{
-      top: -20%;
+      top: -30%;
   }
 }
 
@@ -1101,12 +1135,12 @@ section.special header.major h2:after {
 /* ************************** Social Icon ************************** */
 
 .social{
-  margin: 10px;
+  margin: 8px;
  
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 17px;
   cursor: pointer;
   opacity: 0;
   animation: anim 0.5s forwards;
@@ -1254,6 +1288,17 @@ section.special header.major h2:after {
   .social .fa-linkedin{
     padding: 0.2rem 0.28rem;
   }
+
+  @keyframes anim{
+    0%{
+        top: 0;
+        opacity: 0.5;
+    }
+    100%{
+        top: -25%;
+    }
+  }
+  
 }
 
 @media screen and (max-width: 400px){
@@ -1314,6 +1359,17 @@ section.special header.major h2:after {
   .social .fa-linkedin{
     padding: 0.3rem 0.38rem;
   }
+
+  @keyframes anim{
+    0%{
+        top: 0;
+        opacity: 0.5;
+    }
+    100%{
+        top: -25%;
+    }
+  }
+  
 }
 
 /* Board CSS ends */

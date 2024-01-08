@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="home.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/03e1a34bf0.js" crossorigin="anonymous"></script>
   
 
@@ -462,13 +462,13 @@
 
 
 <!-- Blogs Section Start -->
-<section id="Blogs-start">
-<br><br><h1 style="text-align: center; padding-bottom: 40px; padding-top: 40px; color: white;">
+<section id="Blogs-start blog-section">
+<h1 style="text-align: center; padding-bottom: 40px; padding-top: 40px; color: white;">
     <span style="background-image: linear-gradient(to right, transparent 10%, green 10%, green 90%, transparent 90%);  background-size: 100% 5px; background-repeat: no-repeat; background-position: 0 100%;">
         <strong style="font-size: 1.3em;">Our Blogs</strong>
     </span>
   </h1>
-<section id="Blogs" class="blog-section">
+<section id="Blogs" class="blog-section blog-section-desktop">
     <button id="prevButton" class="arrow-button mx-4">
         <i class="fas fa-arrow-left"></i>
     </button>
@@ -552,12 +552,66 @@
         <i class="fas fa-arrow-right"></i>
     </button>  
 </section>
-<br>
-<br>
-<div class="mb-5 text-center">
+
+
+<!--mobile view for blogs starts-->
+<div id="carouselExampleIndicators2" class="carousel slide mobile-blogs">
+    <div class="carousel-inner" style="text-align: center;">
+      <div class="carousel-item active">
+        <a href="https://ieee-tems-blogs.medium.com/the-linux-weatherman-crafting-accurate-reports-from-scratch-8887a0b32a77"></a>
+        <img class="mimg" src="Blogposts/Snapinsta.app_391089358_187357391062010_7940396338877248259_n_1080.jpg" class="d-block" >
+      </div>
+      <div class="carousel-item">
+        <a href="https://ieee-tems-blogs.medium.com/shell-scripting-to-schedule-your-day-with-crontab-and-notify-send-b320f0a8f57a"></a>
+        <img class="mimg" src="Blogposts/Shellscripting.jpg" class="d-block">
+      </div>
+      <div class="carousel-item">
+        <a href="https://ieee-tems-blogs.medium.com/effortless-email-sending-on-linux-a-step-by-step-project-guide-fb557b6bda8"></a>
+        <img class="mimg" src="Blogposts/shellscript blog.jpg" class="d-block">
+      </div>
+      <div class="carousel-item">
+        <a href="https://ieee-tems-blogs.medium.com/responsive-web-design-creating-websites-for-all-devices-96aad294def1"></a>
+        <img class="mimg" src="Blogposts/responsive web design blog.jpg" class="d-block">
+      </div>
+      <div class="carousel-item">
+        <a href="https://ieee-tems-blogs.medium.com/mastering-the-basics-of-numpy-a-step-by-step-guide-for-beginners-800bbd2337a6"></a>
+  
+        <img class="mimg" src="Blogposts/numpy blog.jpg" class="d-block">
+      </div>
+      <div class="carousel-item">
+        <a href="https://ieee-tems-blogs.medium.com/tailwind-more-than-just-inline-css-bd1a6a01a54c"></a>
+        <img class="mimg" src="Blogposts/tailwind blog.jpg" class="d-block">
+      </div>
+      <div class="carousel-item">
+        <a href="https://ieee-tems-blogs.medium.com/introduction-guide-to-bootstrap-c2149dcd80cf"></a>
+        <img class="mimg" src="Blogposts/bootstrap.jpg" class="d-block">
+        <div class="carousel-caption">
+      </div>
+  
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"  data-bs-slide="prev">
+      <img src="arrow2.svg" class="svg"/>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+      <img src="arrow.svg" class="svg"/>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <br>
+    <br>
+  </section>
+
+
+  <div class="mb-5 text-center">
     <a style="text-decoration: none; " target="_blank" href="https://ieee-tems-blogs.medium.com/"><button style="border-radius: 7px; padding: 5px 10px 5px 10px;background-color:green; font-size: larger; font-weight: bold; color:black ;">View More</button></a>
 </div>
 </section>
+<!--mobile view for blogs ends-->
+
+
+
 <!-- Blogs Section End -->
 
 
