@@ -16,7 +16,6 @@ body {
 body{
     color: white;
     background-color:rgb(22, 22, 22);
-    cursor: none;
  }
   
   /*Home Section CSS*/
@@ -25,10 +24,8 @@ body{
     overflow-x: hidden;
   }
 
-  #homebg{
-    width: 100%;
-    height: 100%;  
-    overflow: hidden;
+  #homebggreen{
+    filter: contrast(10);
   }
 
   #homebg > video{
@@ -280,29 +277,9 @@ body{
 
  /*End Sidebar */
 
-  /* Cursor CSS start*/
-  #circle {
-    width: 12px;
-    height: 12px;
-    background-color: white;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 999; /* Ensure the circle is on top of other elements */
-    mix-blend-mode: difference;
-    transition: transform 0.1s ease-out;
-    display: block;
-  }
-  .enlarge {
-    width: 80px;
-    height: 80px;
-  }  
+
 
   @media screen and (max-width: 800px) {
-    #circle {
-      display: none;
-    }
     body{
       cursor: pointer;
     }
