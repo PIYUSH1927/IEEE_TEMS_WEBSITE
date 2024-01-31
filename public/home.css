@@ -24,9 +24,10 @@ body{
     overflow-x: hidden;
   }
 
-  #homebggreen{
-    filter: contrast(10);
+  #homebggreen {
+    filter: contrast(3) blur(4px);
   }
+  
 
   #homebg > video{
     width: 100vw;
@@ -147,6 +148,10 @@ body{
     #homebg > video{
       height: 100vh;
       width: auto;
+    }
+    #homebggreen{
+      right: 0;
+      height: 100vh;
     }
   }
   @media screen and (min-width: 601px) and (max-width:900px) {
