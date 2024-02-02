@@ -1380,6 +1380,76 @@ section.special header.major h2:after {
 
 /* Board CSS ends */
 
+/* Faculty CSS start */
+.container2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  margin-top: 5vh;
+  gap: 6vw;
+  overflow: hidden;
+}
+
+.card2{
+  width: 17vw;
+  height:39vh;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+}
+
+.card__2{
+  position: relative;
+  width: 15vw;
+  height:36vh;
+  border-radius: 23px;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  margin-bottom: 0%;
+}
+
+.card-color__2{
+  background: #282B30;
+}
+
+.image2{
+  position: relative;
+  width: 12.5vw;
+  height: 16.67vw;
+  border-radius: 5%;
+  margin: 0 auto;
+  transition: all 1s ease;
+  animation: anim2 1s forwards;
+  padding-bottom: 5px;
+}
+
+.card-img2{
+  width: 12.5vw;
+  height: 16.67vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding-bottom: 5px;
+}
+
+.content2{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  position: relative;
+  margin: 0 auto;
+  transition: all 1s ease;
+  animation: anim2 1s forwards;
+}
+
+/* Faculty CSS ends */
+
 /* Events CSS start */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 

@@ -157,18 +157,18 @@ $(".tabs").on("click", "a", function (e) {
   });
 });
 
-let board2022 = document.getElementById('Board-switch-2022');
 let board2023 = document.getElementById('Board-switch-2023');
+let board2024 = document.getElementById('Board-switch-2024');
+let board2024Content = document.getElementById('Board2024');
 let board2023Content = document.getElementById('Board2023');
-let board2022Content = document.getElementById('Board2022');
 
-board2022.addEventListener('click', function(){
-    board2023Content.classList.remove('active-year-board');
-    board2022Content.classList.add('active-year-board');
-})
 board2023.addEventListener('click', function(){
-    board2022Content.classList.remove('active-year-board');
+    board2024Content.classList.remove('active-year-board');
     board2023Content.classList.add('active-year-board');
+})
+board2024.addEventListener('click', function(){
+    board2023Content.classList.remove('active-year-board');
+    board2024Content.classList.add('active-year-board');
 })
 
 
