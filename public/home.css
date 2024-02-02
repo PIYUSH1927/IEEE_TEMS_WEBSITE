@@ -1457,6 +1457,101 @@ section.special header.major h2:after {
   animation: anim2 1s forwards;
 }
 
+@media screen and (min-width: 601px) and (max-width:900px) {
+  .card2{
+    width: 25vw;
+    height:38vh;
+  }
+  
+  .card__2{
+    width: 22vw;
+    height:23vh;
+    padding-left: 0%;
+  }
+
+  .content2{
+    margin: 0;
+  }
+
+  .container2{
+    gap: 0;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .container2{
+    flex-direction: column;
+  }
+
+  .image2{
+    width: 30vw;
+    height: 40vw;
+  }
+  
+  .card-img2{
+    width: 30vw;
+    height: 40vw;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  
+
+  .card2{
+    width: 50vw;
+    height:43vh;
+  }
+  
+  .card__2{
+    width: 50vw;
+    height:28vh;
+    padding-left: 0%;
+  }
+
+  .content2{
+    margin: 0;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .container2{
+    flex-direction: column;
+  }
+
+  .image2{
+    width: 30vw;
+    height: 40vw;
+  }
+  
+  .card-img2{
+    width: 30vw;
+    height: 40vw;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  
+
+  .card2{
+    width: 50vw;
+    height:39vh;
+  }
+  
+  .card__2{
+    width: 50vw;
+    height:25vh;
+    padding-left: 0%;
+  }
+
+  .content2{
+    margin: 0;
+  }
+
+}
 /* Faculty CSS ends */
 
 /* Events CSS start */
