@@ -192,8 +192,16 @@ body{
       margin-top: 0vh;
       margin-left: 7.375vw;
     }
-  }
+    #bgimg{
+      width: 100vw;
+      height: 100vh;
+    }
+    .bgvideo{
+      position: absolute;
+      bottom: 20;
+    }
   
+  }
   /* Home CSS End */
 
     /* Sidebar */
