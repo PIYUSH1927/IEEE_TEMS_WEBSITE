@@ -1404,8 +1404,7 @@ section.special header.major h2:after {
 
 .card2{
   width: 17vw;
-  height:39vh;
-  overflow: hidden;
+  height:55vh;
   background-color: transparent;
   border: none;
 }
@@ -1413,7 +1412,7 @@ section.special header.major h2:after {
 .card__2{
   position: relative;
   width: 15vw;
-  height:36vh;
+  height:40vh;
   border-radius: 23px;
   justify-content: center;
   align-content: center;
@@ -1430,7 +1429,7 @@ section.special header.major h2:after {
 .image2{
   position: relative;
   width: 12.5vw;
-  height: 16.67vw;
+  height: 15.67vw;
   border-radius: 5%;
   margin: 0 auto;
   transition: all 1s ease;
@@ -1440,7 +1439,7 @@ section.special header.major h2:after {
 
 .card-img2{
   width: 12.5vw;
-  height: 16.67vw;
+  height: 15.67vw;
   object-fit: cover;
   object-position: center;
   border-radius: 10%;
@@ -1451,6 +1450,7 @@ section.special header.major h2:after {
 .content2{
   padding-top: 5px;
   padding-bottom: 10px;
+  height: auto;
   position: relative;
   margin: 0 auto;
   transition: all 1s ease;
