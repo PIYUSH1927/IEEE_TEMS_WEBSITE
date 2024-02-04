@@ -1186,8 +1186,15 @@
 </section>
 <!-- Footer End -->
 
-
-
+<!-- Loading Start -->
+<section id="loading">
+    <div id="loader">
+      <dotlottie-player src="https://lottie.host/7bd0512b-e4d6-4138-9c9c-29755e011302/KjQN4EYFAB.lottie"
+        background="transparent" speed="1" loop autoplay id="loop"></dotlottie-player>
+      <p id="changingText2">Launching soon... Refill your snack stash!</p>
+    </div>
+  </section>
+<!-- Loading End -->
 
 <!-- Javascript -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -1226,5 +1233,48 @@
      /* Domain seciton end */
 
    </script>
+
+   <!-- Loading Start -->
+
+   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+  <script>
+    var loading = document.getElementById("loading");
+    window.addEventListener("load", function () {
+      loading.style.display = "none";
+    })
+
+    const loadingLines = [
+      "Launching soon... Refill your snack stash!",
+      "Counting pixels... Almost liftoff!",
+      "Engines firing... No party balloons, we promise.",
+      "Warping through... Loading excitement!",
+      "Cosmic coords set... Patience, padawan.",
+      "Interstellar service... Almost there!",
+      "Hyperdrive engaged... Internet-speed version.",
+      "Stargate standby... Just kidding, almost ready!",
+      "Photon race ongoing... Catching up!",
+      "Hamsters powering up... A bit sleepy.",
+      "Pigeons prepped... Coos incoming!",
+      "Rocket assembly... Bubble wrap-free zone.",
+      "Uncharted loading... New frontier.",
+      "Data asteroids dodged... Content approaching!"
+    ];
+
+
+    const changingText2 = document.getElementById("changingText2");
+    let currentIndex = 0;
+
+    function updateText2() {
+      changingText2.textContent = loadingLines[currentIndex];
+      currentIndex = (currentIndex + 1) % loadingLines.length;
+    }
+
+    setInterval(updateText2, 3000); 
+
+    <!-- Loading End -->
+  </script>
+
+   
+
 </body>
 </html>

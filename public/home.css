@@ -1859,3 +1859,16 @@ section.special header.major h2:after {
 
 /* Footer CSS ends */
 
+/* Loading Start */
+#changingText2{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-right: 2vw;
+  width: 60%;
+  text-align: center;
+}
+/* Loading End */
