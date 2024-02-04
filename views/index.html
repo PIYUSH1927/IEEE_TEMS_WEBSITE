@@ -16,7 +16,51 @@
     </div>
     <img class="logo explore " src="logo3.webp" alt="logo">
     <a href="/home"><button class="glow-on-hover explore"  type="button">EXPLORE NOW</button></a>
+
+    <!-- Loading Start -->
+<section id="loading">
+    <div id="loader">
+      <dotlottie-player src="https://lottie.host/7bd0512b-e4d6-4138-9c9c-29755e011302/KjQN4EYFAB.lottie"
+        background="transparent" speed="1" loop autoplay id="loop"></dotlottie-player>
+      <p id="changingText2">Launching soon... Refill your snack stash!</p>
+    </div>
+  </section>
+<!-- Loading End -->
+
+    <!-- Loading JSS Start -->
+
+   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+   <script>
+     var loading = document.getElementById("loading");
+     window.addEventListener("load", function () {
+       loading.style.display = "none";
+     })
+ 
+     const loadingLines = [
+       "Web Development",
+       "Design",
+       "Machine Learning",
+       "Internet of Things",
+       "DepOps",
+       "Blogging & Vlogging",
+     ];
+ 
+ 
+     const changingText2 = document.getElementById("changingText2");
+     let currentIndex = 0;
+ 
+     function updateText2() {
+       changingText2.textContent = loadingLines[currentIndex];
+       currentIndex = (currentIndex + 1) % loadingLines.length;
+     }
+ 
+     setInterval(updateText2, 3000); 
+ 
+     <!-- Loading JSS End -->
+   </script>
+
     <script src="index.js"></script>
+
 </body>
 </html>
 
