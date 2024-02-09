@@ -122,17 +122,45 @@ body{
     color: white;
   }
 
-  #hlogo{
+  #hlogo {
     position: absolute;
     top: 0;
+    width: 100%;
     left: 0;
     margin: 10px;
-  }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 20; 
+}
 
-  #hlogo > img{
-    width: 12vh;
-  }
+#hlogo > a > img {
+    height: 6vh;
+    width: auto;
+}
 
+#htext{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  margin: 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  top: 15px;
+}
+
+#htext > a > p {
+  margin: 0 auto; 
+  font-family: 'Poppins';
+  font-size: 1.5em;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+}
   .hmenu{
     position: fixed;
     top: 1vh;
@@ -164,6 +192,9 @@ body{
       font-size: 1.5em;
       width: 30vw;
       left: 35vw;
+    }
+    #htext > a> p {
+      font-size: 1.2em;
     }
   }
   
@@ -199,6 +230,12 @@ body{
     .bgvideo{
       position: absolute;
       bottom: 20;
+    }  
+    #hlogo > a > img{
+      width : 15vh;
+    }
+    #htext > a >p {
+      font-size: 1em;
     }
   
   }
@@ -1856,6 +1893,11 @@ section.special header.major h2:after {
   color:rgb(206, 205, 205);
 }
 
+#SW{
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
 
 /* Footer CSS ends */
 
