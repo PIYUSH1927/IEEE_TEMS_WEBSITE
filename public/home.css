@@ -131,7 +131,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     z-index: 20; 
 }
 
@@ -150,14 +149,14 @@ body{
   justify-content: center;
   align-items: center;
   z-index: 10;
-  top: 15px;
+  top: 0px;
 }
 
 #htext > a > p {
   margin: 0 auto; 
   font-family: 'Poppins';
-  font-size: 1.5em;
-  font-weight: 100;
+  font-size: 1.25em;
+  font-weight: 120;
   color: white;
   text-align: center;
 }
@@ -233,6 +232,9 @@ body{
     }  
     #hlogo > a > img{
       width : 15vh;
+    }
+    #hlogo{
+      margin-left: 2px
     }
     #htext > a >p {
       font-size: 1em;
@@ -954,6 +956,11 @@ body{
 #About h1 {
   font-size: 5.5vw;
 }
+#htext > a > p {
+  position: relative;
+  left: 10px;
+  font-weight: bold;
+}
 
 #domain-title {
   font-size: 40px;
@@ -1556,6 +1563,10 @@ section.special header.major h2:after {
 @media screen and (max-width: 400px){
   .container2{
     flex-direction: column;
+  }
+  #htext > a > p {
+    position: relative;
+    left: 20px;
   }
 
   .image2{
