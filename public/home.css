@@ -166,7 +166,7 @@ body{
     top: 1vh;
     right: 1vw;
     margin: 10px;
-    z-index: 15;
+    z-index: 25;
   }
 
   .hmenu > i{
